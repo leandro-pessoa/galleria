@@ -12,7 +12,29 @@ Por ser um site estático, possui uma única funcionalidade:
 
 ## ⬇️ Download do projeto
 
-O projeto pode ser baixado <a src='' download>aqui</a>
+O projeto pode ser baixado <a src='https://github.com/leandro-pessoa/galleria/archive/refs/heads/main.zip' download>aqui</a>
+
+## 🛠️ Executando o projeto
+
+Para executar o projeto faça:
+
+- Baixe o arquivo
+- Descompacte-o
+- Abra a pasta na sua IDE
+- Execute com o live server
+
+## ⚛️ Tecnologias utilizadas
+
+As principais tecnologias utilizadas foram as seguintes:
+
+- `HTML5`
+- `Scss`
+- `JavaScript`
+
+
+## :hurtrealbad: Desenvolvedor
+
+Desenvolvido por [Leandro Pessoa](https://github.com/leandro-pessoa)
 
   
 
