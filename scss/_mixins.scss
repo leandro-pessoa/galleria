@@ -1,0 +1,71 @@
+// import das variáveis criadas
+@use 'variables';
+
+@mixin container {
+    max-width: variables.$container-width;
+    padding: 1.5rem 1rem;
+    margin: 0 auto;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin bg-img ($img) {
+    background: url('../img/#{$img}') center center no-repeat;
+    background-size: 100%;
+    filter: grayscale(100%);
+    transition: .6s;
+
+    &:hover {
+        background-size: 110%;
+        filter: grayscale(0%);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/#{$img}');
+    }
+}
+
+@mixin navbar-style {
+    li {
+        margin: 0 1rem;
+        text-transform: uppercase;
+        font-size: .8rem;
+
+            .active {
+                color: variables.$secondary-color;
+            }
+
+            a {
+                &:hover {
+                    color: variables.$secondary-color;
+                }
+            }
+    }
+}
+
+// breakpoints de responsividade
+
+@mixin menores {
+    @media(max-width: 888px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(min-width: 551px) and (max-width: 888px) {
+        @content;
+    }
+}
+
+@mixin tablet-menor {
+    @media(min-width: 451px) and (max-width: 550px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width: 450px){
+        @content;
+    }
+}

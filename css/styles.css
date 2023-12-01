@@ -1,0 +1,315 @@
+* {
+  font-family: "Josefin Sans";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #777;
+}
+body a {
+  color: #777;
+  text-decoration: none;
+  transition: 0.4s;
+}
+body ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1170px;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+}
+@media (max-width: 450px) {
+  .header {
+    padding: 1.1rem;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 451px) and (max-width: 550px) {
+  .header {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 551px) and (max-width: 888px) {
+  .header {
+    justify-content: flex-start;
+  }
+}
+.header-button {
+  background-color: transparent;
+  border: none;
+  margin-right: 1rem;
+  padding: 0.8rem 0.6rem;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: none;
+}
+.header-button:hover {
+  background-color: rgba(255, 255, 255, 0.3098039216);
+  cursor: pointer;
+}
+.header-button i {
+  color: #fff;
+}
+.header .close {
+  display: none;
+}
+@media (max-width: 888px) {
+  .header .close {
+    display: block;
+    margin-bottom: 40px;
+  }
+}
+.header-brand {
+  color: #fff;
+  font-size: 3rem;
+}
+.header-horizontal-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.header-vertical-menu {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 1.5rem 16px;
+  background-color: #000;
+  z-index: 10;
+}
+.header-horizontal-navbar ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-horizontal-navbar ul li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.header-horizontal-navbar ul li .active {
+  color: #20c997;
+}
+.header-horizontal-navbar ul li a:hover {
+  color: #20c997;
+}
+@media (max-width: 888px) {
+  .header-horizontal-navbar {
+    display: none;
+  }
+}
+.header-vertical-navbar li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.header-vertical-navbar li .active {
+  color: #20c997;
+}
+.header-vertical-navbar li a:hover {
+  color: #20c997;
+}
+.header-vertical-navbar ul {
+  margin-bottom: 30px;
+}
+.header-vertical-navbar ul li {
+  font-size: 0.8rem;
+  margin: 25px;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+  padding-right: 40px;
+}
+.header-social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.header-social-media ul li {
+  margin: 0 1rem;
+}
+.header-social-media ul li a:hover {
+  color: #fff;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1170px;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+@media (max-width: 450px) {
+  .gallery {
+    flex-direction: column;
+  }
+}
+.gallery-card {
+  width: 31%;
+  height: 400px;
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  justify-content: space-around;
+}
+@media (max-width: 450px) {
+  .gallery-card {
+    width: 90%;
+    margin-bottom: 6%;
+  }
+}
+@media (min-width: 451px) and (max-width: 550px) {
+  .gallery-card {
+    height: 280px;
+    width: 48%;
+  }
+}
+@media (min-width: 551px) and (max-width: 888px) {
+  .gallery-card {
+    height: 350px;
+    width: 48%;
+  }
+}
+.gallery-card-tittle {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.gallery-card-btn {
+  padding: 0.6rem 2rem;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.gallery-card-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+.gallery #card-1 {
+  background: url("../img/animais2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-1:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/animais2.jpg");
+}
+.gallery #card-2 {
+  background: url("../img/arquitetura2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-2:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/arquitetura2.jpg");
+}
+.gallery #card-3 {
+  background: url("../img/cidade2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-3:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cidade2.jpg");
+}
+.gallery #card-4 {
+  background: url("../img/decoracao2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-4:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/decoracao2.jpg");
+}
+.gallery #card-5 {
+  background: url("../img/esportes2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-5:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/esportes2.jpg");
+}
+.gallery #card-6 {
+  background: url("../img/natureza2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-6:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/natureza2.jpg");
+}
+.gallery #card-7 {
+  background: url("../img/paisagem2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-7:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/paisagem2.jpg");
+}
+.gallery #card-8 {
+  background: url("../img/pessoas2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-8:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/pessoas2.jpg");
+}
+.gallery #card-9 {
+  background: url("../img/refeicoes2.jpg") center center no-repeat;
+  background-size: 100%;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+.gallery #card-9:hover {
+  background-size: 110%;
+  filter: grayscale(0%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/refeicoes2.jpg");
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+}
+footer span {
+  font-weight: bold;
+  color: #20c997;
+}
+
+/*# sourceMappingURL=styles.css.map */

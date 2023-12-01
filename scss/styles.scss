@@ -1,0 +1,239 @@
+// import das variáveis e mixins a serem utilizados
+@use 'variables';
+@use 'mixins';
+
+// configurações globais
+* {
+    font-family: 'Josefin Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$bg-color;
+    color: variables.$text-color;
+
+    a {
+        color: variables.$text-color;
+        text-decoration: none;
+        transition: .4s;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+// configurações do header
+.header {
+    display: flex;
+    justify-content: space-between;
+    @include mixins.container;
+
+    // configurações responsivas no header
+    @include mixins.mobile {
+        padding: 1.1rem;
+        justify-content: flex-start;
+    }
+    @include mixins.tablet-menor {
+        justify-content: flex-start;
+    }
+    @include mixins.tablet {
+        justify-content: flex-start;
+    }
+
+    &-button {
+        background-color: transparent;
+        border: none;
+        margin-right: 1rem;
+        padding: .8rem .6rem;
+        border-radius: 3px;
+        transition: .3s;
+        display: none;
+
+        &:hover {
+            background-color: variables.$hover;
+            cursor: pointer;
+        }
+
+        i {
+            color: variables.$primary-color;
+        }
+    }
+
+    .close {
+        display: none;
+        @include mixins.menores {
+            display: block;
+            margin-bottom: 40px;
+        }
+    }
+
+    &-brand {
+        color: variables.$primary-color;
+        font-size: 3rem;
+    }
+
+    &-horizontal-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+    }
+
+    &-vertical-menu {
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 1.5rem 16px;
+        background-color: variables.$bg-color;
+        z-index: 10;
+    }
+
+    // configuração da navbar
+    &-horizontal-navbar {
+        ul {
+            height: 100%;
+            @include mixins.navbar-style;
+            @include mixins.flex-center;
+        }
+        
+        // configurações responsivas da navbar
+        @include mixins.menores {
+            display: none;
+        }
+    }
+
+    &-vertical-navbar {
+        @include mixins.navbar-style;
+        ul{
+            margin-bottom: 30px;
+            li {
+                font-size: .8rem;
+                margin: 25px;
+                border-bottom: 1px solid variables.$primary-color;
+                padding: 10px;
+                padding-right: 40px;
+            }
+        }
+    }
+
+    // configuração da aba de redes sociais
+    &-social-media {
+        ul {
+            @include mixins.flex-center;
+            height: 100%;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    &:hover {
+                        color: variables.$primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// configuração dos principais elementos 
+.gallery {
+    @include mixins.flex-center;
+    @include mixins.container;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+
+    // responsividade
+    @include mixins.mobile {
+        flex-direction: column;
+    }
+
+    // configuração dos cards
+    &-card {
+        width: 31%;
+        height: 400px;
+        margin-bottom: 4%;
+        @include mixins.flex-center;
+        flex-direction: column;
+        color: variables.$primary-color;
+        justify-content: space-around;
+
+        // responsividade
+        @include mixins.mobile {
+            width: 90%;
+            margin-bottom: 6%;
+        }
+        @include mixins.tablet-menor {
+            height: 280px;
+            width: 48%;
+        }
+        @include mixins.tablet {
+            height: 350px;
+            width: 48%; 
+        }
+
+        &-tittle {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: variables.$primary-color;
+        }
+
+        &-btn {
+            padding: .6rem 2rem;
+            border: 2px solid variables.$primary-color;
+            color: variables.$primary-color;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            &:hover {
+                background-color: variables.$primary-color;
+                color: variables.$bg-color;
+            }
+        }
+    }
+
+    // inserção das imagens de fundo para cada card
+    #card-1 {
+        @include mixins.bg-img('animais2.jpg')
+    }
+    #card-2 {
+        @include mixins.bg-img('arquitetura2.jpg')
+    }
+    #card-3 {
+        @include mixins.bg-img('cidade2.jpg')
+    }
+    #card-4 {
+        @include mixins.bg-img('decoracao2.jpg')
+    }
+    #card-5 {
+        @include mixins.bg-img('esportes2.jpg')
+    }
+    #card-6 {
+        @include mixins.bg-img('natureza2.jpg')
+    }
+    #card-7 {
+        @include mixins.bg-img('paisagem2.jpg')
+    }
+    #card-8 {
+        @include mixins.bg-img('pessoas2.jpg')
+    }
+    #card-9 {
+        @include mixins.bg-img('refeicoes2.jpg')
+    }
+}
+
+// configuração do footer
+footer {
+    text-align: center;
+    padding: 2rem;
+
+    span {
+        font-weight: bold;
+        color: variables.$secondary-color;
+    }
+}
