@@ -12,7 +12,7 @@ Por ser um site estático, possui uma única funcionalidade:
 
 ## ⬇️ Download do projeto
 
-O projeto pode ser baixado <a src='https://github.com/leandro-pessoa/galleria/archive/refs/heads/main.zip' download>aqui</a>
+O projeto pode ser baixado <a href='https://github.com/leandro-pessoa/galleria/archive/refs/heads/main.zip' download>aqui</a>
 
 ## 🛠️ Executando o projeto
 
